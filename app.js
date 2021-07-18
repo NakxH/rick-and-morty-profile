@@ -12,6 +12,8 @@ const didYouMeanEl = document.querySelector(".didYouMean");
 const charSelect = document.querySelector(".charSelect")
 const charApiUrl = "https://rickandmortyapi.com/api/character";
 const charList = document.querySelector(".charList");
+const nextButton = document.querySelector(".nextButton");
+const backButton = document.querySelector(".backButton");
 
 if(submit) {
   submit.addEventListener("click",(e) => {
@@ -29,7 +31,7 @@ if(submit) {
         buildProfile(data.results[0])
         buildDidYouMean(data.results)
       })
-  
+
   });
 }
 
@@ -62,8 +64,10 @@ function buildDidYouMean(results){
   }
 };
 
-function loadCharacters() {
-  fetch(`${charApiUrl}`)
+let pageNumber = 1;
+
+function loadCharacters(page) {
+  fetch(`${charApiUrl}?page=${page}`)
     .then((responce) => {
       return responce.json();
     })
@@ -74,7 +78,7 @@ function loadCharacters() {
 };
 
 if(charList) {
-  loadCharacters();
+  loadCharacters(pageNumber);
 };
 
 function buildCharList(element, value){
@@ -88,3 +92,17 @@ function buildCharList(element, value){
     })
   });
 };
+
+nextButton.addEventListener("click",() => {
+  if(pageNumber < 34) {
+    pageNumber++;
+    loadCharacters(pageNumber);
+  }
+});
+
+backButton.addEventListener("click",() => {
+  if(pageNumber > 1) {
+    pageNumber--;
+    loadCharacters(pageNumber);
+  }
+});
