@@ -1,8 +1,135 @@
+body {
+  background-color: #35C9DD;
+}
+
 .didYouMean li {
   list-style-type: none;
+  margin: 8px 0;
 }
 
 .image {
-  border-radius: 50%;
+  border-radius: 15%;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.content-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+}
+
+.didYouMeanSection {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.profile img {
+  display: block;
+  margin: 50px 50px auto;
+  height: 360px;
+}
+
+.charInfo {
+  text-align: center;
+}
+
+.form-section label {
+  margin: 0 10px 0 0;
+}
+
+.form-section {
+  margin: 20px 0;
+}
+
+.pageLinkBar {
+  display: flex;
+  justify-content: center;
+  padding: 250px;
+}
+
+.PageLinkBar a {
+  color: white;
+}
+
+.pageLinkBar {
+  background-image: url(https://mystickermania.com/cdn/stickers/rick-and-morty/sticker_2060-512x512.png);
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+}
+
+.pageLink {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+}
+
+li {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  margin: 10px;
+}
+
+.profile p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  font-size: 18px;
+  text-align: center;
+  margin: 4px;
+}
+
+.header h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
+  text-align: center;
+}
+
+.form-section button {
+  font-family: font-family 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 10px 14px;
+  margin: 4px 10px;
+  background-color: #ABF99C;
+  border-radius: 25px;
+  border: 1px;
+  color: black;
+  font-size: 20px;
+}
+
+.form-section button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  background: #71F836;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+
+
 

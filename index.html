@@ -12,32 +12,58 @@
 <body>
   <pre class="responce"></pre>
   <div class="content">
+
     <div class="header">
-      <h1>Rick and Morty</h1>
+      <h1>Rick and Morty <br>Character Library</h1>
     </div>
-    <div class="formSection">
+    <div class="form-section">
       <form>
-        <label>Character Name</label><br>
+        <label>Character Name:</label>
         <input type=text class="characterId">
         <button type=submit class="submitButton">Find Character</button>
       </form>
-      <div>
-        <ul class="didYouMean">
-          
-        </ul>
+    </div>
+    <div class="content-container">
+      <section class="profile" style="display: none">
+          <img src="" class="image">
+          <div class="charInfo">
+            <h2 class="name"></h2>
+            <p class="species"></p>
+            <p class="gender"></p>
+            <p class="status"></p>
+          </div>
+      </section>
+  
+      <div class="didYouMeanSection">
+        <ul class="didYouMean"></ul>
       </div>
     </div>
-    <div class="profile" style="display: none">
-      <img src="" class="image">
-      <h1 class="name"></h1>
-      <h2 class="species"></h2>
-      <h2 class="gender"></h2>
-      <h2 class="status"></h2>
+    <!-- <div class="form-section">
+      <form>
+        <label>Character Name:</label>
+        <input type=text class="characterId">
+        <button type=submit class="submitButton">Find Character</button>
+      </form>
     </div>
+
+    <section class="profile" style="display: none">
+        <img src="" class="image">
+        <div class="charInfo">
+          <h2 class="name"></h1>
+          <h4 class="species"></h2>
+          <h4 class="gender"></h2>
+          <h4 class="status"></h2>
+        </div>
+    </section>
+
+    <div class="didYouMeanSection">
+      <ul class="didYouMean"></ul>
+    </div> -->
+
   </div>
   
-<div>
-  <a class="pageLink" href="index2.html">Click here for a full list of characters</a>
+<div class="pageLinkBar">
+  <a class="pageLink" href="index2.html">Click here<br> for a full list <br>of characters</a>
 </div>
  
 
