@@ -14,6 +14,7 @@ const charApiUrl = "https://rickandmortyapi.com/api/character";
 const charList = document.querySelector(".charList");
 const nextButton = document.querySelector(".nextButton");
 const backButton = document.querySelector(".backButton");
+let maxPageCount = 1;
 
 if(submit) {
   submit.addEventListener("click",(e) => {
@@ -31,7 +32,7 @@ if(submit) {
         buildProfile(data.results[0])
         buildDidYouMean(data.results)
       })
-
+      
   });
 }
 
@@ -79,6 +80,7 @@ function loadCharacters(page) {
     .then(data => {
       console.log(data);
       buildCharList(charList, data.results)
+      maxPageCount = data.info.pages
     })
 };
 
@@ -99,7 +101,7 @@ function buildCharList(element, value){
 };
 
 nextButton.addEventListener("click",() => {
-  if(pageNumber < 34) {
+  if(pageNumber < maxPageCount) {
     pageNumber++;
     loadCharacters(pageNumber);
   }
