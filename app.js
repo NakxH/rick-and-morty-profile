@@ -48,13 +48,17 @@ function buildProfile(result){
   buildSection(nameEl, result.name);
   buildSection(speciesEl, result.species, "Species: ");
   buildSection(genderEl, result.gender, "Gender: ");
-  buildSection(statusEl, result.status, "Status: ");
+  buildSection(statusEl, result.status, "Status:");
   buildImageSection(imageEl, result.image);
   profile.style.display = "block";
 };
 
 function buildDidYouMean(results){
+  const sectionTitle = document.createElement("h4");
+  sectionTitle.innerText = "Did you mean?"
+  sectionTitle.classList.add("dym-title")
   didYouMeanEl.innerHTML = ""
+  didYouMeanEl.appendChild(sectionTitle)
   for (let i = 1; i < results.length; i++) {
     const item = document.createElement("li");
     item.innerHTML = `${results[i].name} - ${results[i].origin.name}`;
