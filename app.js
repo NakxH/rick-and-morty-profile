@@ -35,8 +35,9 @@ if(submit) {
   });
 }
 
-function buildSection(element, value){
-  element.innerHTML = value
+function buildSection(element, value, sect){
+  if (sect === undefined) return element.innerHTML = value;
+  element.innerHTML = `${sect} ${value}`;
 };
 
 function buildImageSection(element, value){
@@ -45,9 +46,9 @@ function buildImageSection(element, value){
 
 function buildProfile(result){
   buildSection(nameEl, result.name);
-  buildSection(speciesEl, result.species);
-  buildSection(genderEl, result.gender);
-  buildSection(statusEl, result.status);
+  buildSection(speciesEl, result.species, "Species: ");
+  buildSection(genderEl, result.gender, "Gender: ");
+  buildSection(statusEl, result.status, "Status: ");
   buildImageSection(imageEl, result.image);
   profile.style.display = "block";
 };

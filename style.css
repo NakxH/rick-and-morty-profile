@@ -51,21 +51,19 @@ body {
   margin: 20px 0;
 }
 
-.pageLinkBar {
-  display: flex;
-  justify-content: center;
-  padding: 250px;
-}
-
 .PageLinkBar a {
   color: white;
 }
 
 .pageLinkBar {
+  display: flex;
+  justify-content: center;
+  padding: 150px;
   background-image: url(https://mystickermania.com/cdn/stickers/rick-and-morty/sticker_2060-512x512.png);
   background-repeat: no-repeat;
   background-size: 250px;
   background-position: center;
+  margin: 0;
 }
 
 .pageLink {
@@ -106,6 +104,7 @@ h2 {
   font-weight: bolder;
   font-size: 40px;
   text-align: center;
+  margin: 20px;
 }
 
 .form-section button {
@@ -114,9 +113,9 @@ h2 {
   margin: 4px 10px;
   background-color: #ABF99C;
   border-radius: 25px;
-  border: 1px;
+  border: 2px solid black;
   color: black;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .form-section button:hover {
@@ -124,12 +123,35 @@ h2 {
 }
 
 button:active {
-  background: #71F836;
+  background: green;
   -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
           box-shadow: inset 0px 0px 5px #c1c1c1;
    outline: none;
 }
 
+.characterId {
+  padding: 10px 14px;
+  margin: 4px 10px;
+  border: 2px solid black;
+  border-radius: 25px;
+  height: 16px;
+  outline: none;
+}
 
+.charNameSearchBar {
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+}
 
+.header img {
+  display: block;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
